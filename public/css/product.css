@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom,(#2196f3,#e91e61));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 500px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(238, 3, 3, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    gap: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    background-color: #b4d7f5;
+    outline: none;
+}
+
+select {
+    padding: 15px 10px;
+}
+
+button {
+    padding: 15px;
+    background: linear-gradient(to right, #2196f3,#e91e61);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+button:hover {
+    background: linear-gradient(to right, #FF5F6D, #FFC371);
+}
+
+.error-message,
+.success-message {
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.error-message {
+    color: #c0392b;
+}
+
+.success-message {
+    color: #27ae60;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group label {
+    position: absolute;
+    top: -18px;
+    left: 0;
+    font-size: 14px;
+    color: #FF5F6D;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group select:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group select:not(:placeholder-shown) + label {
+    top: -30px;
+    font-size: 12px;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
